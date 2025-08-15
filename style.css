@@ -1,0 +1,115 @@
+﻿html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Libertinus Serif', serif;
+  background: linear-gradient(135deg, #a0dff7, #ffffff);
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+
+h1 {
+  margin-top: 100px;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+
+#input-area {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 30% 30%, #ffffff 60%, #e0f0ff 100%);
+  display: flex;
+  gap: 10px;
+  padding: 15px 25px;
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  z-index: 10;
+  max-width: 90%;
+}
+
+
+#manifestation-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 50px;
+  background: transparent;
+  font-family: 'Libertinus Serif', serif;
+}
+
+
+button {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50px;
+  background: #a0dff7;  /* same blue as gradient */
+  color: #666666;        /* grey text */
+  font-family: 'Libertinus Serif', serif; /* match cloud/text font */
+  transition: background 0.2s;
+}
+
+
+button:hover {
+  background: #88c0e0;  /* slightly darker for hover */
+}
+
+
+/* Cloud container */
+.cloud {
+  position: absolute;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  justify-content: center;  /* horizontal centering */
+  align-items: center;      /* vertical centering */
+  flex-direction: column;   /* ensure text stays in center */
+}
+
+
+/* Fluffy ellipses for realistic clouds */
+.cloud-ellipse {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.85;
+  pointer-events: none;
+  box-shadow: 0 5px 15px rgba(255,255,255,0.6);
+}
+
+
+/* Text inside cloud */
+.cloud-text {
+  position: relative;
+  z-index: 10;
+  font-family: 'Libertinus Serif', serif;
+  text-align: center;
+  word-break: break-word;        
+  overflow-wrap: break-word;     
+  white-space: pre-wrap;         
+  padding: 15px 20px;            
+  font-size: 16px;
+  color: #666666;                
+  max-width: 180px;              /* wraps text sooner */
+  box-sizing: border-box;
+  margin: 0;                     /* removes default margins */
+}
